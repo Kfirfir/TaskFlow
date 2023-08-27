@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+    <title>Welcome to TaskFlow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-main {
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 4rem;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .a-paragraph{
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+
+        }
+
+        .a-paragraph:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <h1>Welcome to TaskFlow!</h1>
+        <p>TaskFlow is a powerful and intuitive web application designed to streamline your task management experience. Built using ASP.NET MVC and deployed on Azure, TaskFlow offers a seamless platform for creating, editing, viewing, and deleting tasks with ease.</p>
+
+        <h2>Key Features:</h2>
+        <ol>
+            <li><strong>Task Creation:</strong> Easily create new tasks by providing a title, description, and other essential details.</li>
+            <li><strong>Task Editing:</strong> Update task details whenever needed. Modify descriptions, or any other attributes to reflect the most accurate information.</li>
+            <li><strong>Task Viewing:</strong> Access a comprehensive list of all your tasks.</li>
+            <li><strong>Task Deletion:</strong> Completed a task? Remove it from your list with a simple delete action. This keeps your task space clutter-free and focused on current priorities.</li>
+        </ol>
+
+        <h2>Navigation:</h2>
+        <ul>
+            <li><strong><a class="a-paragraph" asp-area="" asp-controller="Home" asp-action="Index">Home</a>:</strong> You're here! The home page provides an overview of TaskFlow and how it can assist you in managing your tasks efficiently.</li>
+            <li><strong><a class="a-paragraph" asp-area="" asp-controller="Taskks" asp-action="Index">Tasks</a>:</strong> Navigate to this tab to interact with your tasks. Create new tasks, edit existing ones and mark tasks as complete.</li>
+            <li><strong><a class="a-paragraph" asp-area="" asp-controller="Taskks" asp-action="ShowSearchForm">Search</a>:</strong> Looking for a specific task? The Search tab enables you to find tasks quickly by their names. Just enter a keyword, and TaskFlow will display relevant results.</li>
+        </ul>
+
+        <p>Start maximizing your productivity today with TaskFlow. Sign in or create an account to get started, and experience the power of organized task management like never before.</p>
+
+        <p><strong>TaskFlow - Your Tasks, Your Way.</strong></p>
+    </div>
+</body>
+</html>
+

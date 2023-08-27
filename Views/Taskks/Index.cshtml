@@ -1,0 +1,188 @@
+﻿@model IEnumerable<TaskFlow.Models.Taskk>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+.container-main {
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 4rem;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .container {
+    padding-left: 2rem;
+    float: left;
+    }
+
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+input {
+    margin: 0;
+}
+
+.container {
+    margin: 24px auto;
+    max-width: 960px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table--bordered {
+    border: 1px solid #d7d7d7;
+}
+
+.table--shaded {
+    border-bottom: 2px solid #c6d5e3;
+}
+
+.table__head {
+    border-bottom: 2px solid #c6d5e3;
+    color: #7196b9;
+}
+
+.table--shaded .table__head {
+    background: #f7fafc;
+}
+
+.table__row:not(:last-of-type) {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.table__cell {
+    padding: 16px 12px 14px;
+}
+
+.table__head .table__cell {
+    padding: 10px 12px 8px;
+}
+
+.table--bordered .table__cell:not(:last-of-type) {
+    border-right: 1px solid #eaeaea;
+}
+
+.table__head .table__cell {
+    font-weight: 700;
+}
+
+.table__cell--checkbox {
+    max-width: 25px;
+    padding: 16px 0 14px 12px;
+}
+
+.table__head .table__cell--checkbox {
+    padding: 10px 0 8px 12px;
+}
+
+.table__cell--no-wrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table__cell--remainder {
+    width: 99%;
+}
+
+.UserTable__name {
+    max-width: 200px;
+}
+
+    footer .container {
+        margin: 0;
+    }
+
+.create-button {
+        border-radius: 4px;
+        background-color: #5ca1e1;
+        border: none;
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        padding: 16px;
+        width: 220px;
+        transition: all 0.5s;
+        cursor: pointer;
+        box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+    }
+
+    .create-button {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .create-button:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 14px;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .create-button:hover {
+            padding-right: 24px;
+            padding-left: 8px;
+        }
+
+            .create-button:hover:after {
+                opacity: 1;
+                right: 10px;
+            }
+
+
+</style>
+
+
+<div class="container">
+    <div class="container-main">
+        <div class="content-container">
+            <h4>
+                <button class="create-button" onclick="location.href='@Url.Action("Create", "Taskks")'">Create New Task</button>
+            </h4>
+            <table class="table table--shaded">
+            <thead class="table__head">
+                <tr class="table__row">
+                    <td class="table__cell table__cell--checkbox table__cell--no-wrap"></td>
+                    <td class="table__cell table__cell--no-wrap">Task</td>
+                    <td class="table__cell">Created</td>
+                    <td class="table__cell">Tools</td>
+                </tr>
+            </thead>
+            <tbody class="table__body">
+                @foreach (var item in Model)
+                {
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--checkbox table__cell--no-wrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="table__cell table__cell--no-wrap">@Html.DisplayFor(modelItem => item.TaskkName)</td>
+                        <td class="table__cell">@item.Created.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td class="table__cell">
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

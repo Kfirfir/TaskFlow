@@ -1,0 +1,60 @@
+﻿@model TaskFlow.Models.Taskk
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+
+    .custom-textarea {
+        display: flex;
+        width: 100%;
+        max-width: 300px; /* Adjust as needed */
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical; /* Allow vertical resizing */
+        box-sizing: border-box;
+    }
+
+    html body div.container main.pb-3 div.row div.col-md-4 form div.form-group label.control-label {
+        margin-top: 0.3rem;
+    }
+
+    html body div.container main.pb-3 div.row div.col-md-4 form div.form-group input.btn.btn-primary {
+        margin-top: 0.25rem;
+    }
+</style>
+
+<h1>Create A Task</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TaskkName" class="control-label">Task Name</label>
+                <input asp-for="TaskkName" class="form-control" />
+                <span asp-validation-for="TaskkName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaskkContent" class="control-label">Task Content</label>
+                <textarea asp-for="TaskkContent" rows="4" class="custom-textarea"></textarea>
+                <span asp-validation-for="TaskkContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
