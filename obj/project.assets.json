@@ -12040,6 +12040,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.10",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.10",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.10",
+      "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
@@ -12047,19 +12048,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kfirm\\.nuget\\packages\\": {}
+    "C:\\Users\\kfir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kfirm\\source\\repos\\TaskFlow\\TaskFlow.csproj",
+      "projectUniqueName": "D:\\Projects\\WebDev\\TaskFlow\\TaskFlow.csproj",
       "projectName": "TaskFlow",
-      "projectPath": "C:\\Users\\kfirm\\source\\repos\\TaskFlow\\TaskFlow.csproj",
-      "packagesPath": "C:\\Users\\kfirm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kfirm\\source\\repos\\TaskFlow\\obj\\",
+      "projectPath": "D:\\Projects\\WebDev\\TaskFlow\\TaskFlow.csproj",
+      "packagesPath": "C:\\Users\\kfir\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\WebDev\\TaskFlow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kfirm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kfir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12094,6 +12095,10 @@
             "version": "[7.0.10, )"
           },
           "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[7.0.10, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.10, )"
           },

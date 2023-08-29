@@ -1,0 +1,46 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: 60px;
+    background-color: rgb(246, 246, 246);   
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.bg-white {
+    background-color: red;
+}
+
+footer .container{
+    padding-left: 2rem;
+    float: left;
+}
+
+html body header nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 div.container-fluid a.navbar-brand {
+    cursor: default;
+    pointer-events: none;
+    font-size: 24px;
+}

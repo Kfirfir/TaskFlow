@@ -17,6 +17,7 @@
     <WebStackScaffolding_ViewDialogWidth>800</WebStackScaffolding_ViewDialogWidth>
     <_SelectedScaffolderID>IdentityScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Identity</_SelectedScaffolderCategoryPath>
+    <NameOfLastUsedPublishProfile>D:\Projects\WebDev\TaskFlow\Properties\PublishProfiles\taskflow - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
